@@ -1,4 +1,3 @@
-A = input()
-B = input()
+num = input().split()
 
-print(A + B)
+print(int(num[0]) + int(num[1]))
