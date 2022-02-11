@@ -21,6 +21,6 @@ print(count)
 result = 0
 for i in range(int(input())):
     word = input()
-    if list(word) == sorted(word, key=word.find):
+    if list(word) == sorted(word, key=word.find): # sorted http://blog.weirdx.io/post/50236 , find 처음 문자 순서대로 sorted 되는듯
         result += 1
 print(result)

@@ -1,3 +1,5 @@
-word = 'happy'
-for i in range(0,len(word)-1):
-    print(i)
+word = 'aba'
+list = list(word)
+list_2 = sorted(word, key=word.find)
+print(list)
+print(list_2)
