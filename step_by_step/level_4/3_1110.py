@@ -16,5 +16,5 @@ while True:
 
     if tmp == int(num):
         break
-        
+
 print(cycle)
