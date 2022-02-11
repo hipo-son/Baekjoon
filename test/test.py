@@ -1,5 +1,5 @@
-word = 'aba'
-list = list(word)
-list_2 = sorted(word, key=word.find)
-print(list)
-print(list_2)
+import sys
+input = sys.stdin.readline
+tmp = list(map(int, input().rstrip().split()))
+
+print(tmp)
