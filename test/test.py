@@ -1,2 +1,3 @@
-a = -1
-print(int(a))
+word = 'happy'
+for i in range(0,len(word)-1):
+    print(i)
