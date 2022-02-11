@@ -19,3 +19,4 @@ result = list(map(int, list(result - total_list)))
 
 for i in sorted(result):
     print(i)
+###################################################### fix 2
