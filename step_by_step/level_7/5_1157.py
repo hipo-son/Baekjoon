@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-from collections import Counter
+from collections import Counter # 데이터의 개수 카운팅시 사용하는 모듈
 while True: # 굳이 예외는 안해도 됬음 , 런타임 떠서 시도해봤음
     try:
         word = input().rstrip().upper() # 대문자 변환
