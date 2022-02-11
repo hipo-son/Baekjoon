@@ -6,7 +6,7 @@ count = len(word)
 for i in range(0, len(word) - 1):
     if i > len(word) - 3:
         if word[i] == 'd' and word[i+1] == '-':
-             count -= 1
+            count -= 1
         elif word[i] == 'c' and word[i+1] == '-':
             count -= 1
         elif word[i] == 'c' and word[i+1] == '=':
@@ -18,7 +18,7 @@ for i in range(0, len(word) - 1):
         elif word[i] == 's' and word[i+1] == '=':
             count -= 1
         elif word[i] == 'z' and word[i+1] == '=':
-            count += 1
+            count -= 1
     else:
         if word[i] == 'c' and word[i+1] == '-':
             count -= 1
@@ -37,3 +37,18 @@ for i in range(0, len(word) - 1):
         elif word[i] == 'z' and word[i+1] == '=':
             count -= 1
 print(count)
+################################################################ fix 2
+a = input()
+n = len(a)
+for i in range (n):
+	if a[i] == "=":
+		if (i > 1) and (a[i - 1] == "z") and (a[i - 2] == "d"):
+			n -= 2
+		else:
+			n -= 1
+	elif a[i] == "-":
+		n -= 1
+	elif a[i] == "j":
+		if (a[i - 1] == "l") or (a[i - 1] == "n"):
+			n -= 1
+print(n)
