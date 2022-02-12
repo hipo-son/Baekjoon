@@ -1,15 +1,12 @@
-A , B = 1, 2
+import sys
+input = sys.stdin.readline
+N = int(input().rstrip())
 
-distance = 1
-count, total, tmp = 0, 0, 0
-i = 1
-while distance > total:
-    if tmp == 1:
-        tmp = 0
-        total += i
-        i += 1
-    else:
-        tmp += 1
-        total += i
-    count += 1
-print(count)
+for i in range(2, N+1):
+    a = 0
+    if a == 0:
+        while N % i == 0:
+            print(i)
+            N //= i
+    if N - i == 0:
+        break
