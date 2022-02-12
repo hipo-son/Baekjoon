@@ -5,7 +5,7 @@ n = int(input().rstrip())
 count = 0
 remainder = (n % 30)
 n_3 = list(range(3,30,5)) + list(range(6,30,5)) + list(range(9,30,5)) + list(range(12,30,5)) + list(range(0,30,5))
-
+print(n_3)
 if remainder in n_3 :
     count += (n // 30) * 6
     if n % 5 == 0: # 5 만 있을때
