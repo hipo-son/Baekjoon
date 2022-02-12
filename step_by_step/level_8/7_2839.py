@@ -1,4 +1,7 @@
+import sys
+input = sys.stdin.readline
 
+n = int(input().rstrip())
 count = 0
 remainder = (n % 30)
 n_3 = list(range(3,30,5)) + list(range(6,30,5)) + list(range(9,30,5)) + list(range(12,30,5)) + list(range(0,30,5))
@@ -21,4 +24,5 @@ if remainder in n_3 :
         count += (remainder - 9) // 5
 else:
     count = -1
+
 print(count)
