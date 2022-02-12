@@ -1,11 +1,11 @@
 import sys
 input = sys.stdin.readline
-xy1 = list(map(int, input().rstrip().split()))
+xy1 = list(map(int, input().rstrip().split())) # 리스트 받기
 xy2 = list(map(int, input().rstrip().split()))
 xy3 = list(map(int, input().rstrip().split()))
 
 result = [0,0]
-for i in range(0,2):
+for i in range(0,2): # 같은좌표 지우기 
     if xy1[i] == xy2[i]:
         result[i] = xy3[i]
     elif xy1[i] == xy3[i]:
