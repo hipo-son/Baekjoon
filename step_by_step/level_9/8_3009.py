@@ -13,3 +13,4 @@ for i in range(0,2):
     elif xy2[i] == xy3[i]:
         result[i] = xy1[i]
 print(result[0], result[1])
+############################## 함수로 정의해서 해도 괜찮을듯
