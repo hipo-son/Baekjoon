@@ -8,6 +8,8 @@ def fib(n):
             f[i] = f0 + f1
             f0 , f1 = f1, f[i]
         return f
-
 n = int(input().rstrip())
-print(fib(n)[n-1])
+if n == 0:
+    print(0)
+else:
+    print(fib(n)[n-1])
