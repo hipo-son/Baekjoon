@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-import math
+import math   # math 라이브러리
 R = int(input().rstrip())
 
 print(math.pi * (R**2))
