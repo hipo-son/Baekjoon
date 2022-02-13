@@ -12,9 +12,6 @@ for i in range(1,n+1):
     for j in range(2*i, n+1, i):
         a[j] = False
 
-if M % 2 == 0:
-    M += 1
-
 for num in range(M, N, 2):
     if num in primes:
         print(num)
