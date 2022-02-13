@@ -23,7 +23,6 @@ def draw_star(n) :
                 continue
             for k in range(a) : # 3일떄 9일때 생각
                 Map[a*i+k][a*j:a*(j+1)] = Map[k][:a] #????
-
                 # print(Map[k][:a])
 
 draw_star(N) # 함수
