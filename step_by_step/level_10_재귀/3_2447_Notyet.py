@@ -1,4 +1,4 @@
-import sys
+import sys # https://study-all-night.tistory.com/5
 input = sys.stdin.readline
 import numpy as np
 
@@ -21,9 +21,10 @@ def draw_star(n) :
         for j in range(3) :
             if i == 1 and j == 1 :
                 continue
-            for k in range(a) :
+            for k in range(a) : # 3일떄 9일때 생각
                 Map[a*i+k][a*j:a*(j+1)] = Map[k][:a] #????
-    print(np.array(Map))
+
+                # print(Map[k][:a])
 
 draw_star(N) # 함수
 
