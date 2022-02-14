@@ -1,9 +1,13 @@
+import sys
 
-def happy(i):
-    if i == 1:
-        i = 1
-        return i
-    i = 2
-    return i
+def hanoi(num, f, b, t):
+    if num == 1:
+        print(f, t)
+    else:
+        hanoi(num-1, f, t, b)
+        print(f, t)
+        hanoi(num-1, b, f, t)
 
-print(happy(1))
+num = int(sys.stdin.readline())
+print(2**num - 1)
+hanoi(num, 1, 2, 3)
