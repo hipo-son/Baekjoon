@@ -15,13 +15,22 @@ for i in range(len(board)-(size-1)):  # 원하는 크기만큼 색일할 위치�
 
 total = []
 for happy in list:
-    # print(happy)
     count = 0
     for i in range(happy[0], happy[0] + size):
         for j in range(happy[1], happy[1] + size):
             if board[i][j] == 'W' and (i + j) % 2 == 0:
                 continue
             elif board[i][j] == 'B' and (i + j) % 2 == 1:
+                continue
+            else:
+                    count +=1
+    total.append(count)
+    count = 0
+    for i in range(happy[0], happy[0] + size):
+        for j in range(happy[1], happy[1] + size):
+            if board[i][j] == 'B' and (i + j) % 2 == 0:
+                continue
+            elif board[i][j] == 'W' and (i + j) % 2 == 1:
                 continue
             else:
                 count +=1
