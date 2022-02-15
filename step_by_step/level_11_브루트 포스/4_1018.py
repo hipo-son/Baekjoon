@@ -16,7 +16,7 @@ for i in range(len(board)-(size-1)):  # 원하는 크기만큼 색일할 위치�
 total = []
 for happy in list:
     count = 0
-    for i in range(happy[0], happy[0] + size):
+    for i in range(happy[0], happy[0] + size): #시작위치부터  W 로 칠할때
         for j in range(happy[1], happy[1] + size):
             if board[i][j] == 'W' and (i + j) % 2 == 0:
                 continue
@@ -26,7 +26,7 @@ for happy in list:
                     count +=1
     total.append(count)
     count = 0
-    for i in range(happy[0], happy[0] + size):
+    for i in range(happy[0], happy[0] + size): #시작위치부터 B 로 칠항때
         for j in range(happy[1], happy[1] + size):
             if board[i][j] == 'B' and (i + j) % 2 == 0:
                 continue
