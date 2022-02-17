@@ -1,5 +1,19 @@
-# import sys
-# input = sys.stdin.readline
+import sys
+input = sys.stdin.readline
+
+n,m = list(map(int,input().split()))
+s = []
+def dfs():
+    if len(s)==m:
+        print(' '.join(map(str,s)))
+        return
+
+    for i in range(1,n+1):
+        if i not in s:
+            s.append(i)
+            dfs()
+            s.pop()
+dfs()
 #
 # N, M = map(int, input().rstrip().split())
 #
@@ -40,21 +54,21 @@
 
 #########################################
 
-N, M = map(int, input().split())
-visited = [0 for _ in range(N)]
-arr = []
-def dfs(cnt):
-    if cnt == M:
-        print(*arr)
-        return
-
-    for i in range(N):
-        if visited[i] == 0:
-            visited[i] = 1
-            arr.append(i+1)
-
-            dfs(cnt+1)
-
-            visited[i] = 0
-            arr.pop()
-dfs(0)
+# N, M = map(int, input().split())
+# visited = [0 for _ in range(N)]
+# Li = []
+# def dfs(depth):
+#     if depth == M:
+#         print(*Li)
+#         return
+#
+#     for i in range(N):
+#         if visited[i] == 0:
+#             visited[i] = 1
+#             Li.append(i+1)
+#
+#             dfs(depth+1)
+#
+#             visited[i] = 0
+#             Li.pop()
+# dfs(0)
