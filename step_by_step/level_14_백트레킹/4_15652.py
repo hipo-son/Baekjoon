@@ -1,18 +1,17 @@
 import sys
 input = sys.stdin.readline
 
-n,m = map(int, input().split())
-
-s = []
+N, M = map(int, input().split())
+Li = []
 
 def dfs(start):
-    if len(s)==m:
-        print(' '.join(map(str,s)))
+    if len(Li) == M:
+        print(' '.join(map(str, Li)))
         return
 
-    for i in range(start, n+1):
-        s.append(i)
+    for i in range(start, N+1):
+        Li.append(i)
         dfs(i)
-        s.pop()
+        Li.pop()
 
 dfs(1)
