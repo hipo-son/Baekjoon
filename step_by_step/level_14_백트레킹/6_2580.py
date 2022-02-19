@@ -5,6 +5,8 @@ import numpy as np
 
 Li = [list(map(int, input().rstrip().split())) for i in range(9)]
 
+num = [0] * 9
+
 
 
 
