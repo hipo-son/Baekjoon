@@ -40,3 +40,4 @@ for i in range(0, len(total)):
     result.append(abs(sum(tmp1_list)-sum(tmp2_list)))
 print(result)
 print(min(result))
+########################## fail
