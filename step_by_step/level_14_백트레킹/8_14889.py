@@ -18,26 +18,19 @@ def f(idx):
             f(idx +1)
             Li.pop()
 f(1)
-
-total_1 = []
-for i in total:
-    tmp = []
-    for j in i:
-        tmp.append((N + 1) - j)
-    # if tmp in total: # 오히려 시간이 많이듬
-    #     total.remove(tmp)
-    total_1.append(tmp)
-
+num = [i for i in range(1, N+1)]
 result = []
-for i in range(0, len(total)):
-    tmp1 = list(permutations(total[i], 2))
-    tmp2 = list(permutations(total_1[i], 2))
-    tmp1_list = []
-    tmp2_list = []
-    for j in range(0, len(tmp1)):
-        tmp1_list.append(int(stat[tmp1[j][0] - 1][tmp1[j][1] - 1 ]))
-        tmp2_list.append(int(stat[tmp2[j][0] - 1][tmp2[j][1] - 1 ]))
-    result.append(abs(sum(tmp1_list)-sum(tmp2_list)))
-print(result)
+for i in range(len(total)):
+    start = total[i]
+    link = list(set(num) - set(start))
+    start_per = list(permutations(start, 2))
+    link_per = list(permutations(link, 2))
+    start_list, link_list = [], []
+    for j in range(len(start_per)):
+        tmp1 = stat[start_per[j][0] -1][start_per[j][1] -1]
+        tmp2 = stat[link_per[j][0] -1][link_per[j][1] -1]
+        start_list.append(int(tmp1))
+        link_list.append(int(tmp2))
+    result.append(abs(sum(start_list) - sum(link_list)))
 print(min(result))
-########################## fail
+######################################################### 메모리 초과 ;;;;
