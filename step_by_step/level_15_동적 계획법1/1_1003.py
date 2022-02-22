@@ -1,13 +1,19 @@
 import sys
 input = sys.stdin.readline
 
-N = int(input().rstrip())
-
-def fibo(x):
-    if x == 0:
-        return 0
-    if x == 1 or x == 2:
-        return 1
+def fibo_index(x):
+    if x in Li:
+        return Li[x]
     else:
-        return fibo(x-1) + fibo(x-2)
-print(fibo(N))
+        a = fibo_index(x-1)[0] +  fibo_index(x-2)[0] # 0
+        b = fibo_index(x-1)[1] +  fibo_index(x-2)[1] # 1
+        Li[x] = [a, b]
+        return Li[x]
+
+T = int(input().rstrip())
+for _ in range(T):
+    N = int(input().rstrip())
+    Li = {0: [1, 0], 1:[0, 1]}
+    f = fibo_index(N)
+    print(f[0],f[1])
+    # print(Li)
