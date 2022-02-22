@@ -13,7 +13,7 @@ def fibo_index(x):
 T = int(input().rstrip())
 for _ in range(T):
     N = int(input().rstrip())
-    Li = {0: [1, 0], 1:[0, 1]} # x 가 0,1 일때 
+    Li = {0: [1, 0], 1:[0, 1]} # x 가 0,1 일때
     f = fibo_index(N)
     print(f[0],f[1])
     # print(Li)
