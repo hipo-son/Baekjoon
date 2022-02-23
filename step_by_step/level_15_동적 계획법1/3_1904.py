@@ -9,10 +9,13 @@ for i in range(3, N+1):
 print(dp[N])
 
 # N = int(input().rstrip())
-# memo = {}
+# sys.setrecursionlimit(10**6)
+# memo = {1: 1, 2: 2}
 # def DP(N):
 #     if N in memo:
 #         return memo[N]
-#     elif:
+#     else:
+#         memo[N] = (DP(N-1) + DP(N-2))%15746
+#         return memo[N]
 #
 # print(DP(N))
