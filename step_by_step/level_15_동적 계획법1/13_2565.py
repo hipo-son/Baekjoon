@@ -1,4 +1,4 @@
-import sys
+import sys # 11,12 문제에서 max or if 어느것이 더 빠른가 비교 하셈
 input = sys.stdin.readline
 
 N = int(input().rstrip())
@@ -13,4 +13,4 @@ for i in range(N):
         if Li[i][1] > Li[j][1]: # i 번째의 2번째 전봇대에서 수열이 되면
             DP[i] = max(DP[i], DP[j] + 1) # 이전의 최대 DP or j의 경우 DP
 
-print(N - max(DP)) # 일대일 대응일때 연결 가능한 줄수 N - DP 최대값 = 최소 제거 전기줄 
+print(N - max(DP)) # 일대일 대응일때 연결 가능한 줄수 N - DP 최대값 = 최소 제거 전기줄
