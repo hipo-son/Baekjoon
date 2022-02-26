@@ -1,4 +1,4 @@
-import sys 
+import sys
 input = sys.stdin.readline
 
 N = int(input().rstrip())
@@ -6,7 +6,7 @@ N = int(input().rstrip())
 Li = [list(map(int, input().split())) for i in range(N)]
 Li.sort() # 1번째 전봇대 정렬 , 2번째 전봇대의 부분 수열길이만 고려하면 쉽게 풀림, 1번째는 오름 차순으로 2번째 전봇대 값의 수열로 최대 연결 횟수 구하기 가능
 
-DP = [1 for i in range(N)]
+DP = [1] * N
 
 for i in range(N):
     for j in range(i):
