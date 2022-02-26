@@ -1,4 +1,4 @@
-import sys # 11,12 문제에서 max or if 어느것이 더 빠른가 비교 하셈
+import sys 
 input = sys.stdin.readline
 
 N = int(input().rstrip())
