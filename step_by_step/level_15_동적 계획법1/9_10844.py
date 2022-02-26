@@ -7,7 +7,7 @@ DP = [[0] * 10 for i in range(N + 1)]
 for i in range(1, 10): # 1일떄의 경우의수
     DP[1][i] = 1
 for i in range(2, N + 1):
-    for j in range(10): # 2 이상일떄 위치할 수 있는 경우의수
+    for j in range(10): # 2 이상일떄 위치할 수 있는 경우의수 : 0,9 의 경우는 숫자 1,8 에서만 올수 있고 나머지는 두곳에서 가능
         if j == 0:
             DP[i][j] = DP[i-1][j+1]
         elif j == 9:
