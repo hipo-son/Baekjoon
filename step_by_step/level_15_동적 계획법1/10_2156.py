@@ -8,5 +8,5 @@ DP[1] = Li[1]
 if N >= 2: # 두칸 이상일때
     DP[2] = max(Li[1]+Li[2], Li[2])
 for i in range(3, N+1):
-    DP[i] = max(DP[i-1], Li[i] + DP[i-2], Li[i] + Li[i-1] + DP[i-3])
+    DP[i] = max(DP[i-1], Li[i] + DP[i-2], Li[i] + Li[i-1] + DP[i-3]) # 예제와 같은경우 , i 자리의 포도주를 안먹는게 최대값이 된다.
 print(DP[N])
