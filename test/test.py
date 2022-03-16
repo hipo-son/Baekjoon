@@ -1,4 +1,7 @@
-Li = []
-if not Li:
-    print(1)
-print(Li)
+from math import factorial
+
+N, K = 26, 5
+
+result = factorial(N)//(factorial(K) * factorial(N-K))
+
+print(result)
